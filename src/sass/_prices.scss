@@ -1,0 +1,74 @@
+.prices {
+    min-height: 500px;
+    padding-top: 53px;
+    &__divinder {
+        @include divinder;
+    }
+    &__promo {
+        color: #595959;
+        font-size: 21px;
+        line-height: 24px;
+        font-weight: 300;
+        width: 710px;
+        margin: 17px auto 0 auto;
+        text-align: center;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__cart {
+        width: 261px;
+        min-height: 330px;
+        border: 1px solid #e9e9e9;
+        margin-top: 34px;
+        padding-bottom: 26px;
+    }
+    &__title {
+        height: 61px;
+        width: 100%;
+        background-color: #25333c;
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+    &__img {
+        width: 60px;
+        height: 52px;
+        margin: 0 auto;
+        margin-top: 14px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__delivery {
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #595959;
+        text-align: center;
+        margin-top: 12px;
+    }
+    &__price {
+        font-size: 28px;
+        text-transform: none;
+        color: $color;
+        text-align: center;
+        margin-top: 3px;
+    }
+    &__text {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 300;
+        color: #595959;
+        text-align: center;
+        margin-top: 19px;
+    }
+}

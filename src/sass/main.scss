@@ -1,0 +1,24 @@
+@import './variables.scss';
+@import './mixins';
+@import './animations';
+@import './header';
+@import './fonts';
+@import './button';
+@import './title';
+@import './advantages';
+@import './delivery';
+@import './agent';
+@import './prices';
+@import './form';
+@import './managers';
+@import './scheme';
+@import './slider';
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}

@@ -1,0 +1,77 @@
+.form {
+    padding: 55px 0 58px 0;
+    min-width: 287px;
+    &__title {
+        font-size: 28px;
+        font-weight: 400;
+        color: #3a3a3a;
+        text-align: center;
+        margin: 0;
+    }
+    &__img {
+        width: 102px;
+        height: 102px;
+        margin: 20px auto 0 auto;
+        position: relative;
+        &::before {
+            content: '';
+            height: 1px;
+            width: 510px;
+            background-color: #c4c4c4;
+            position: absolute;
+            top: 51px;
+            right: 112px;
+        }
+        &::after {
+            content: '';
+            height: 1px;
+            width: 510px;
+            background-color: #c4c4c4;
+            position: absolute;
+            top: 51px;
+            left: 112px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__wrapper {
+        margin-top: 16px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 175px;
+            background-color: #c4c4c4;
+            left: 0;
+            top: -66px;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            width: 1px;
+            height: 175px;
+            background-color: #c4c4c4;
+            right: 0;
+            top: -66px;
+        }
+    }
+    &__input {
+        border: 1px solid #cacaca;
+        border-radius: 50px;
+        padding: 18px 28px;
+        color: #898989;
+        width: 260px;
+        outline: none;
+        &:focus {
+            border-color: $color;
+        }
+        &:not(:last-child) {
+            margin-right: 5px;
+        }
+    }
+}

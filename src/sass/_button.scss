@@ -1,0 +1,57 @@
+.button {
+    background-color: $color;
+    padding: 18px 23px;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #ffffff;
+    border-radius: 35px;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    display: block;
+    outline: none;
+    &:focus {
+        box-shadow: 4px 4px 20px $color;
+    }
+    &__header {
+        padding: 23px 45px;
+        font-size: 15px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #ffffff;
+        margin: 39px auto 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__prices {
+        margin: 25px auto 0 auto;
+        padding: 18px 45px;
+        display: block;
+    }
+    &__form {
+        margin: 0 auto;
+        margin-top: 29px;
+        padding: 18px 31px;
+        position: relative;
+        &::before {
+            content: '';
+            height: 1px;
+            width: 466px;
+            background-color: #c4c4c4;
+            position: absolute;
+            top: 24px;
+            right: 194px;
+        }
+        &::after {
+            content: '';
+            height: 1px;
+            width: 466px;
+            background-color: #c4c4c4;
+            position: absolute;
+            top: 24px;
+            left: 194px;
+        }
+    }
+}
