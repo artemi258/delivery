@@ -1334,76 +1334,68 @@ __webpack_require__.r(__webpack_exports__);
 window.addEventListener('DOMContentLoaded', function () {
   'use strick';
 
-  var sliders = document.querySelectorAll('.slider__slide'),
-      next = document.querySelector('.next'),
+  var next = document.querySelector('.next'),
       prev = document.querySelector('.prev'),
       wrapper = document.querySelector('.slider__wrapper'),
       inner = document.querySelector('.slider__inner');
-  var index = 1;
 
-  function slides(i) {
+  function slidesActive() {
+    var sliders = document.querySelectorAll('.slider__slide');
     sliders.forEach(function (item) {
       item.classList.remove('slider__active');
-      item.querySelector('.slider__img').style.cssText = "\n            width: 72px;\n            height: 72px;\n            ";
-      item.querySelector('.slider__name').style.cssText = "\n            font-size: 13px;\n            line-height: 16px; \n            margin: 5px 0 0 0;\n            ";
-      item.querySelector('.slider__text').style.cssText = "\n            font-size: 10px;\n            margin: 5px 0 0 0;\n            line-height: 13px;\n            ";
+      item.querySelector('.slider__img').style.cssText = "\n                   width: 72px;\n                   height: 72px;\n                ";
+      item.querySelector('.slider__name').style.cssText = "\n                font-size: 13px;\n                line-height: 16px; \n                margin: 5px 0 0 0;\n                ";
+      item.querySelector('.slider__text').style.cssText = "\n                font-size: 10px;\n                margin: 5px 0 0 0;\n                line-height: 13px;\n                ";
     });
-    sliders[i].classList.add('slider__active');
-    sliders[i].querySelector('.slider__img').style.cssText = "\n            width: 114px;\n            height: 114px;\n        ";
-    sliders[i].querySelector('.slider__name').style.cssText = "\n            font-size: 18px;\n            line-height: 22px;\n            margin: 19px 0 0 0;\n        ";
-    sliders[i].querySelector('.slider__text').style.cssText = "\n            font-size: 14px;\n            margin: 15px 0 0 0;\n            line-height: 22px;\n        ";
+    sliders[1].classList.add('slider__active');
+    sliders[1].querySelector('.slider__img').style.cssText = "\n               width: 114px;\n               height: 114px;\n           ";
+    sliders[1].querySelector('.slider__name').style.cssText = "\n               font-size: 18px;\n               line-height: 22px;\n               margin: 19px 0 0 0;\n           ";
+    sliders[1].querySelector('.slider__text').style.cssText = "\n               font-size: 14px;\n               margin: 15px 0 0 0;\n               line-height: 22px;\n               ";
   }
 
-  slides(1);
+  ;
+  slidesActive();
 
   function nextSlider() {
-    if (index === sliders.length - 1) {
-      index = 0;
-      inner.append(sliders[index + 1]);
-    } else if (index === 0) {
-      index = 1;
-      inner.append(sliders[index + 1]);
-    } else {
-      inner.append(sliders[index - 1]);
-      ++index;
-    }
-
-    slides(index);
+    var sliders = document.querySelectorAll('.slider__slide');
+    inner.append(sliders[0]);
+    slidesActive();
   }
 
+  ;
   next.addEventListener('click', function () {
     nextSlider();
   });
   prev.addEventListener('click', function () {
-    if (index === 0) {
-      index = sliders.length - 1;
-      inner.prepend(sliders[index - 1]);
-    } else if (index === sliders.length - 1) {
-      index = 1;
-      inner.prepend(sliders[index - 1]);
-    } else {
-      inner.prepend(sliders[index + 1]);
-      --index;
-    }
-
-    slides(index);
-  });
-  var sliderInterval = setInterval(function () {
-    return nextSlider();
-  }, 3000); //первый запуск слайдера
+    var sliders = document.querySelectorAll('.slider__slide');
+    inner.prepend(sliders[sliders.length - 1]);
+    slidesActive();
+  }); // let sliderInterval = setInterval(nextSlider, 3000); // убрать обратный  отсчет слайдера после отвода мышки
+  // function autoSlider() {
+  //      sliderInterval = setInterval(nextSlider, 3000);
+  //     };
+  //     wrapper.addEventListener('mouseenter', () => {
+  //         clearInterval(sliderInterval);
+  //         console.log(1);
+  //        });
+  //     wrapper.addEventListener('mouseleave', () => {
+  //            autoSlider();
+  //            console.log(2);
+  //        });
 
   function autoSlider() {
-    sliderInterval = setInterval(function () {
-      return nextSlider();
-    }, 3000); //повторный запуск слайдера
+    var sliderInterval = setInterval(nextSlider, 3000);
+    wrapper.addEventListener('mouseenter', function () {
+      clearInterval(sliderInterval);
+      console.log(1);
+    });
+    wrapper.addEventListener('mouseleave', function () {
+      autoSlider();
+      console.log(2);
+    });
   }
 
-  wrapper.addEventListener('mouseenter', function () {
-    clearInterval(sliderInterval);
-  });
-  wrapper.addEventListener('mouseleave', function () {
-    autoSlider();
-  });
+  autoSlider();
 });
 
 /***/ })
