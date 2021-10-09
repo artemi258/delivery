@@ -1,5 +1,6 @@
 .slider {
     padding: 51px 0 65px 0;
+    min-height: 350px;
     &__slide {
         width: 360px;
         opacity: 0.3;
@@ -23,6 +24,7 @@
         img {
             width: 100%;
             height: 100%;
+            border-radius: 100%;
         }
     }
     &__name {
@@ -45,12 +47,14 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        overflow: hidden;
         flex-wrap: wrap;
     }
     &__wrapper {
         position: relative;
-        margin-top: 31px;
+        height: 255px;
+        margin: 31px auto 0 auto;
+        width: 1415px;
+        overflow: hidden;
     }
     .prev {
         background: url(../img/prev.png) center center / cover no-repeat;
@@ -58,7 +62,7 @@
         width: 14px;
         position: absolute;
         top: 36px;
-        left: 44%;
+        left: 590px;
         cursor: pointer;
 }
     .next {
@@ -67,7 +71,7 @@
         width: 14px;
         position: absolute;
         top: 36px;
-        right: 44%;
+        right: 590px;
         cursor: pointer;
 }
     &__active {
