@@ -58,7 +58,7 @@
         width: 14px;
         position: absolute;
         top: 36px;
-        left: 650px;
+        left: 44%;
         cursor: pointer;
 }
     .next {
@@ -67,7 +67,7 @@
         width: 14px;
         position: absolute;
         top: 36px;
-        right: 650px;
+        right: 44%;
         cursor: pointer;
 }
     &__active {
@@ -75,22 +75,6 @@
         animation: slider 1s linear;
         margin: 0 45px 0 45px;
         width: 600px;
-        // &__next {
-        //         background: url(../img/prev.png) center center / cover no-repeat;
-        //         height: 46px;
-        //         width: 14px;
-        //         position: absolute;
-        //         top: 36px;
-        //         left: 187px;
-        // }
-        // &__prev {
-        //     background: url(../img/next.png) center center / cover no-repeat;
-        //     height: 46px;
-        //     width: 14px;
-        //     position: absolute;
-        //     top: 36px;
-        //     right: 187px;
-        // }
     }
 }
 

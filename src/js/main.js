@@ -63,31 +63,31 @@ window.addEventListener('DOMContentLoaded', () => {
         slidesActive();
     });
 
-    // let sliderInterval = setInterval(nextSlider, 3000); // убрать обратный  отсчет слайдера после отвода мышки
+    let sliderInterval = setInterval(nextSlider, 3000); // убрать обратный  отсчет слайдера после отвода мышки
 
-    // function autoSlider() {
-    //      sliderInterval = setInterval(nextSlider, 3000);
-    //     };
-    //     wrapper.addEventListener('mouseenter', () => {
-    //         clearInterval(sliderInterval);
-    //         console.log(1);
-    //        });
-    //     wrapper.addEventListener('mouseleave', () => {
-    //            autoSlider();
-    //            console.log(2);
-    //        });
+    function autoSlider() {
+         sliderInterval = setInterval(nextSlider, 3000);
+        };
+        wrapper.addEventListener('mouseenter', () => {
+            clearInterval(sliderInterval);
+            console.log(1);
+           });
+        wrapper.addEventListener('mouseleave', () => {
+               autoSlider();
+               console.log(2);
+           });
 
-           function autoSlider() {
-          const sliderInterval = setInterval(nextSlider, 3000);
-               wrapper.addEventListener('mouseenter', () => {
-                   clearInterval(sliderInterval);
-                   console.log(1);
-                  });
-               wrapper.addEventListener('mouseleave', () => {
-                      autoSlider();
-                      console.log(2);
-                  });
-           }
-           autoSlider();
+        //    function autoSlider() {
+        //   const sliderInterval = setInterval(nextSlider, 3000);
+        //        wrapper.addEventListener('mouseenter', () => {
+        //            clearInterval(sliderInterval);
+        //            console.log(1);
+        //           });
+        //        wrapper.addEventListener('mouseleave', () => {
+        //               autoSlider();
+        //               console.log(2);
+        //           });
+        //    }
+        //    autoSlider();
         
 });

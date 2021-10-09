@@ -1370,32 +1370,33 @@ window.addEventListener('DOMContentLoaded', function () {
     var sliders = document.querySelectorAll('.slider__slide');
     inner.prepend(sliders[sliders.length - 1]);
     slidesActive();
-  }); // let sliderInterval = setInterval(nextSlider, 3000); // убрать обратный  отсчет слайдера после отвода мышки
-  // function autoSlider() {
-  //      sliderInterval = setInterval(nextSlider, 3000);
-  //     };
-  //     wrapper.addEventListener('mouseenter', () => {
-  //         clearInterval(sliderInterval);
-  //         console.log(1);
-  //        });
-  //     wrapper.addEventListener('mouseleave', () => {
-  //            autoSlider();
-  //            console.log(2);
-  //        });
+  });
+  var sliderInterval = setInterval(nextSlider, 3000); // убрать обратный  отсчет слайдера после отвода мышки
 
   function autoSlider() {
-    var sliderInterval = setInterval(nextSlider, 3000);
-    wrapper.addEventListener('mouseenter', function () {
-      clearInterval(sliderInterval);
-      console.log(1);
-    });
-    wrapper.addEventListener('mouseleave', function () {
-      autoSlider();
-      console.log(2);
-    });
+    sliderInterval = setInterval(nextSlider, 3000);
   }
 
-  autoSlider();
+  ;
+  wrapper.addEventListener('mouseenter', function () {
+    clearInterval(sliderInterval);
+    console.log(1);
+  });
+  wrapper.addEventListener('mouseleave', function () {
+    autoSlider();
+    console.log(2);
+  }); //    function autoSlider() {
+  //   const sliderInterval = setInterval(nextSlider, 3000);
+  //        wrapper.addEventListener('mouseenter', () => {
+  //            clearInterval(sliderInterval);
+  //            console.log(1);
+  //           });
+  //        wrapper.addEventListener('mouseleave', () => {
+  //               autoSlider();
+  //               console.log(2);
+  //           });
+  //    }
+  //    autoSlider();
 });
 
 /***/ })
