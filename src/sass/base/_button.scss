@@ -30,7 +30,7 @@
         padding: 18px 45px;
         display: block;
     }
-    &__form {
+    &__consultation {
         margin: 0 auto;
         margin-top: 29px;
         padding: 18px 31px;
@@ -53,5 +53,9 @@
             top: 24px;
             left: 194px;
         }
+    }
+    &__questions {
+        margin-top: 16px;
+        padding: 18px 31px;
     }
 }

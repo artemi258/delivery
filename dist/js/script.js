@@ -1328,12 +1328,30 @@ module.exports = g;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each.js */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/slider */ "./src/js/modules/slider.js");
 
 window.addEventListener('DOMContentLoaded', function () {
   'use strick';
 
+  Object(_modules_slider__WEBPACK_IMPORTED_MODULE_0__["default"])();
+});
+
+/***/ }),
+
+/***/ "./src/js/modules/slider.js":
+/*!**********************************!*\
+  !*** ./src/js/modules/slider.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each.js */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var slider = function slider() {
   var next = document.querySelector('.next'),
       prev = document.querySelector('.prev'),
       wrapper = document.querySelector('.slider__wrapper'),
@@ -1343,14 +1361,14 @@ window.addEventListener('DOMContentLoaded', function () {
     var sliders = document.querySelectorAll('.slider__slide');
     sliders.forEach(function (item) {
       item.classList.remove('slider__active');
-      item.querySelector('.slider__img').style.cssText = "\n                   width: 72px;\n                   height: 72px;\n                ";
-      item.querySelector('.slider__name').style.cssText = "\n                font-size: 13px;\n                line-height: 16px; \n                margin: 5px 0 0 0;\n                ";
-      item.querySelector('.slider__text').style.cssText = "\n                font-size: 10px;\n                margin: 5px 0 0 0;\n                line-height: 13px;\n                ";
+      item.querySelector('.slider__img').style.cssText = "\n             width: 72px;\n             height: 72px;\n          ";
+      item.querySelector('.slider__name').style.cssText = "\n          font-size: 13px;\n          line-height: 16px; \n          margin: 5px 0 0 0;\n          ";
+      item.querySelector('.slider__text').style.cssText = "\n          font-size: 10px;\n          margin: 5px 0 0 0;\n          line-height: 13px;\n          ";
     });
     sliders[1].classList.add('slider__active');
-    sliders[1].querySelector('.slider__img').style.cssText = "\n               width: 114px;\n               height: 114px;\n           ";
-    sliders[1].querySelector('.slider__name').style.cssText = "\n               font-size: 18px;\n               line-height: 22px;\n               margin: 19px 0 0 0;\n           ";
-    sliders[1].querySelector('.slider__text').style.cssText = "\n               font-size: 14px;\n               margin: 15px 0 0 0;\n               line-height: 22px;\n               ";
+    sliders[1].querySelector('.slider__img').style.cssText = "\n         width: 114px;\n         height: 114px;\n     ";
+    sliders[1].querySelector('.slider__name').style.cssText = "\n         font-size: 18px;\n         line-height: 22px;\n         margin: 19px 0 0 0;\n     ";
+    sliders[1].querySelector('.slider__text').style.cssText = "\n         font-size: 14px;\n         margin: 15px 0 0 0;\n         line-height: 22px;\n         ";
   }
 
   ;
@@ -1380,24 +1398,13 @@ window.addEventListener('DOMContentLoaded', function () {
   ;
   wrapper.addEventListener('mouseenter', function () {
     clearInterval(sliderInterval);
-    console.log(1);
   });
   wrapper.addEventListener('mouseleave', function () {
     autoSlider();
-    console.log(2);
-  }); //    function autoSlider() {
-  //   const sliderInterval = setInterval(nextSlider, 3000);
-  //        wrapper.addEventListener('mouseenter', () => {
-  //            clearInterval(sliderInterval);
-  //            console.log(1);
-  //           });
-  //        wrapper.addEventListener('mouseleave', () => {
-  //               autoSlider();
-  //               console.log(2);
-  //           });
-  //    }
-  //    autoSlider();
-});
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (slider);
 
 /***/ })
 

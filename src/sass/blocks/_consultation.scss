@@ -1,4 +1,4 @@
-.form {
+.consultation {
     padding: 55px 0 58px 0;
     min-width: 287px;
     &__title {
@@ -67,6 +67,7 @@
         color: #898989;
         width: 260px;
         outline: none;
+        font-weight: 300;
         &:focus {
             border-color: $color;
         }
