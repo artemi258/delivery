@@ -1857,7 +1857,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var wowjs__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(wowjs__WEBPACK_IMPORTED_MODULE_1__);
 
 
-new wowjs__WEBPACK_IMPORTED_MODULE_1__["WOW"]().init();
+var wow = new wowjs__WEBPACK_IMPORTED_MODULE_1__["WOW"]({
+  boxClass: 'wow',
+  // animated element css class (default is wow)
+  animateClass: 'animated',
+  // animation css class (default is animated)
+  offset: '100',
+  // distance to the element when triggering the animation (default is 0)
+  mobile: true,
+  // trigger animations on mobile devices (default is true)
+  live: true,
+  // act on asynchronously loaded content (default is true)
+  callback: function callback(box) {// the callback is fired every time an animation is started
+    // the argument that is passed in is the DOM node being animated
+  },
+  scrollContainer: null // optional scroll container selector, otherwise use window
+
+});
+wow.init();
 window.addEventListener('DOMContentLoaded', function () {
   'use strick';
 
@@ -1888,12 +1905,12 @@ var slider = function slider() {
   function slidesActive() {
     var sliders = document.querySelectorAll('.slider__slide');
     sliders.forEach(function (item) {
-      item.classList.remove('slider__active');
+      item.classList.remove('slider__active', 'wow', 'animate__animated', 'animate__zoomIn');
       item.querySelector('.slider__img').style.cssText = "\n             width: 72px;\n             height: 72px;\n          ";
       item.querySelector('.slider__name').style.cssText = "\n          font-size: 13px;\n          line-height: 16px; \n          margin: 5px 0 0 0;\n          ";
       item.querySelector('.slider__text').style.cssText = "\n          font-size: 10px;\n          margin: 5px 0 0 0;\n          line-height: 13px;\n          ";
     });
-    sliders[1].classList.add('slider__active');
+    sliders[1].classList.add('slider__active', 'wow', 'animate__animated', 'animate__zoomIn');
     sliders[1].querySelector('.slider__img').style.cssText = "\n         width: 114px;\n         height: 114px;\n     ";
     sliders[1].querySelector('.slider__name').style.cssText = "\n         font-size: 18px;\n         line-height: 22px;\n         margin: 19px 0 0 0;\n     ";
     sliders[1].querySelector('.slider__text').style.cssText = "\n         font-size: 14px;\n         margin: 15px 0 0 0;\n         line-height: 22px;\n         ";

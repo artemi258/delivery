@@ -1,30 +1,9 @@
-// @keyframes slider {
-//     from {
-//         opacity: 0.3;
-//     }
+@keyframes slider {
+    from {
+        opacity: 0.3;
+    }
 
-//     to {
-//         opacity: 1;
-//     }
-// }
-
-// @keyframes fadeInLeft {
-//     from {
-//         opacity: 0;
-//         transform: translateX(-150%);
-//     }
-//     to {
-//         opacity: 1;
-//         transform: translateX(0);
-//     }
-// }
-// @keyframes fadeInRight {
-//     from {
-//         opacity: 0;
-//         transform: translateX(150%);
-//     }
-//     to {
-//         opacity: 1;
-//         transform: translateX(0);
-//     }
-// }
+    to {
+        opacity: 1;
+    }
+}
