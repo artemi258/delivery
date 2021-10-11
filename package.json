@@ -34,5 +34,8 @@
     "maintained node versions",
     "not dead"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "wowjs": "^1.1.3"
+  }
 }
