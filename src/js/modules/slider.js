@@ -10,7 +10,7 @@
          const sliders = document.querySelectorAll('.slider__slide');
 
          sliders.forEach(item => {
-             item.classList.remove('slider__active', 'wow', 'animate__animated', 'animate__zoomIn');
+             item.classList.remove('slider__active', 'wow', 'animate__animated', 'animate__fadeIn');
              item.querySelector('.slider__img').style.cssText = `
              width: 72px;
              height: 72px;
@@ -27,7 +27,7 @@
           `
          });
 
-         sliders[1].classList.add('slider__active', 'wow', 'animate__animated', 'animate__zoomIn');
+         sliders[1].classList.add('slider__active', 'wow', 'animate__animated', 'animate__fadeIn');
          sliders[1].querySelector('.slider__img').style.cssText = `
          width: 114px;
          height: 114px;
