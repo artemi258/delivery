@@ -1934,10 +1934,10 @@ var slider = function slider() {
     inner.prepend(sliders[sliders.length - 1]);
     slidesActive();
   });
-  var sliderInterval = setInterval(nextSlider, 5000); // убрать обратный  отсчет слайдера после отвода мышки
+  var sliderInterval = setInterval(nextSlider, 3000); // убрать обратный  отсчет слайдера после отвода мышки
 
   function autoSlider() {
-    sliderInterval = setInterval(nextSlider, 5000);
+    sliderInterval = setInterval(nextSlider, 3000);
   }
 
   ;

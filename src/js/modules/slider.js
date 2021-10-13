@@ -62,10 +62,10 @@
          slidesActive();
      });
 
-     let sliderInterval = setInterval(nextSlider, 5000); // убрать обратный  отсчет слайдера после отвода мышки
+     let sliderInterval = setInterval(nextSlider, 3000); // убрать обратный  отсчет слайдера после отвода мышки
 
      function autoSlider() {
-         sliderInterval = setInterval(nextSlider, 5000);
+         sliderInterval = setInterval(nextSlider, 3000);
      };
      wrapper.addEventListener('mouseenter', () => {
          clearInterval(sliderInterval);
