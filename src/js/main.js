@@ -1,4 +1,5 @@
 import slider from './modules/slider';
+import forms from './modules/form';
 import { WOW } from 'wowjs';
 
 const wow = new WOW(
@@ -23,5 +24,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
    
    slider();
+   forms();
         
 });

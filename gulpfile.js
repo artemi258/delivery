@@ -11,6 +11,7 @@ const imagemin = require('gulp-imagemin');
 const htmlmin = require('gulp-htmlmin');
 
 const dist = "./dist/";
+// const dist = "C:/OpenServer/domains/Delivery/"
 
 
 gulp.task('server', function() {
