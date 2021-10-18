@@ -4518,12 +4518,14 @@ module.exports = g;
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/slider */ "./src/js/modules/slider.js");
 /* harmony import */ var _modules_form__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/form */ "./src/js/modules/form.js");
-/* harmony import */ var wowjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! wowjs */ "./node_modules/wowjs/dist/wow.js");
-/* harmony import */ var wowjs__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(wowjs__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _modules_scrolling__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/scrolling */ "./src/js/modules/scrolling.js");
+/* harmony import */ var wowjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! wowjs */ "./node_modules/wowjs/dist/wow.js");
+/* harmony import */ var wowjs__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(wowjs__WEBPACK_IMPORTED_MODULE_3__);
 
 
 
-var wow = new wowjs__WEBPACK_IMPORTED_MODULE_2__["WOW"]({
+
+var wow = new wowjs__WEBPACK_IMPORTED_MODULE_3__["WOW"]({
   boxClass: 'wow',
   // animated element css class (default is wow)
   animateClass: 'animated',
@@ -4546,6 +4548,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
   Object(_modules_slider__WEBPACK_IMPORTED_MODULE_0__["default"])();
   Object(_modules_form__WEBPACK_IMPORTED_MODULE_1__["default"])();
+  Object(_modules_scrolling__WEBPACK_IMPORTED_MODULE_2__["default"])();
 });
 
 /***/ }),
@@ -4561,12 +4564,12 @@ window.addEventListener('DOMContentLoaded', function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var regenerator_runtime_runtime_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! regenerator-runtime/runtime.js */ "./node_modules/regenerator-runtime/runtime.js");
 /* harmony import */ var regenerator_runtime_runtime_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(regenerator_runtime_runtime_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each.js */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
-/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
-/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var core_js_modules_es_promise_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es.promise.js */ "./node_modules/core-js/modules/es.promise.js");
-/* harmony import */ var core_js_modules_es_promise_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_promise_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es.object.to-string.js */ "./node_modules/core-js/modules/es.object.to-string.js");
+/* harmony import */ var core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_object_to_string_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var core_js_modules_es_promise_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/es.promise.js */ "./node_modules/core-js/modules/es.promise.js");
+/* harmony import */ var core_js_modules_es_promise_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_promise_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each.js */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var core_js_modules_es_promise_finally_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es.promise.finally.js */ "./node_modules/core-js/modules/es.promise.finally.js");
 /* harmony import */ var core_js_modules_es_promise_finally_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es_promise_finally_js__WEBPACK_IMPORTED_MODULE_4__);
 
@@ -4583,12 +4586,8 @@ function forms() {
   var form = document.querySelectorAll('form'),
       input = document.querySelectorAll('input');
 
-  function postData(_x, _x2) {
-    return _postData.apply(this, arguments);
-  }
-
-  function _postData() {
-    _postData = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(url, data) {
+  var postData = /*#__PURE__*/function () {
+    var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(url, data) {
       var res;
       return regeneratorRuntime.wrap(function _callee$(_context) {
         while (1) {
@@ -4615,14 +4614,16 @@ function forms() {
         }
       }, _callee);
     }));
-    return _postData.apply(this, arguments);
-  }
 
-  ;
+    return function postData(_x, _x2) {
+      return _ref.apply(this, arguments);
+    };
+  }();
+
   var message = {
-    spinner: '../icons/loading.gif',
-    ok: '../icons/ok.png',
-    fail: '../icons/error.jpg'
+    spinner: "./icons/loading.gif",
+    ok: "./icons/ok.png",
+    fail: "Что-то пошло не так(😞"
   };
 
   var clearInput = function clearInput() {
@@ -4631,7 +4632,6 @@ function forms() {
     });
   };
 
-  console.log(form);
   form.forEach(function (item) {
     item.addEventListener('submit', function (e) {
       e.preventDefault();
@@ -4640,25 +4640,78 @@ function forms() {
       item.appendChild(statusMessage);
       var statusImg = document.createElement('img');
       statusImg.setAttribute('src', message.spinner);
-      statusMessage.appendChild(statusImg); // let textMessage = document.createElement('div');
-      //     textMessage.textContent = message.loading;
-      //     statusMessage.appendChild(textMessage);
-
+      statusMessage.appendChild(statusImg);
       var formData = new FormData(item);
       postData('../send.php', formData).then(function (res) {
         console.log(res);
         statusImg.setAttribute('src', message.ok);
       }).catch(function () {
-        statusImg.setAttribute('src', message.error);
+        statusMessage.style.width = '200px';
+        statusMessage.textContent = "".concat(message.fail);
       }).finally(function () {
         clearInput();
-        statusMessage.remove();
+        setTimeout(function () {
+          statusMessage.remove();
+        }, 7000);
       });
     });
   });
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (forms);
+
+/***/ }),
+
+/***/ "./src/js/modules/scrolling.js":
+/*!*************************************!*\
+  !*** ./src/js/modules/scrolling.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/web.dom-collections.for-each.js */ "./node_modules/core-js/modules/web.dom-collections.for-each.js");
+/* harmony import */ var core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_collections_for_each_js__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function scrolling() {
+  var links = document.querySelectorAll('[href^="#"]'),
+      speed = 0.2;
+  links.forEach(function (link) {
+    link.addEventListener('click', function (event) {
+      event.preventDefault();
+      var heightTop = document.documentElement.scrollTop,
+          hash = this.hash,
+          toBlock = document.querySelector(hash).getBoundingClientRect().top,
+          start = null;
+      requestAnimationFrame(step);
+
+      function step(time) {
+        if (start === null) {
+          start = time;
+        } // console.log(`${time`);
+        // console.log(`${start}start`);
+
+
+        var progress = time - start,
+            r = toBlock < 0 ? Math.max(heightTop - progress / speed, heightTop + toBlock) : Math.min(heightTop + progress / speed, heightTop + toBlock);
+        console.log(r); // console.log(progress);
+        // const r = toBlock - heightTop;
+
+        document.documentElement.scrollTo(0, r);
+
+        if (r != heightTop + toBlock) {
+          requestAnimationFrame(step);
+        } else {
+          location.hash = hash;
+        }
+      }
+    });
+  });
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (scrolling);
 
 /***/ }),
 

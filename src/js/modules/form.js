@@ -7,14 +7,14 @@
                     method: "POST",
                     body: data
                 });
+                
                 return await res.text();
             };
               
-
         const message = {
-            spinner: '../icons/loading.gif',
-            ok: '../icons/ok.png',
-            fail: '../icons/error.jpg'
+            spinner: "./icons/loading.gif",
+            ok: "./icons/ok.png",
+            fail: "Что-то пошло не так(😞"
         };
 
        const clearInput = () => {
@@ -22,7 +22,6 @@
                item.value = '';
            });
         }
-           console.log(form);
         form.forEach(item => {
             
             item.addEventListener('submit', (e) => {
@@ -35,10 +34,6 @@
                 let statusImg = document.createElement('img');   
                     statusImg.setAttribute('src', message.spinner);
                     statusMessage.appendChild(statusImg);
-    
-                // let textMessage = document.createElement('div');
-                //     textMessage.textContent = message.loading;
-                //     statusMessage.appendChild(textMessage);
 
                 const formData = new FormData(item);
 
@@ -48,13 +43,14 @@
                     statusImg.setAttribute('src', message.ok);
                 })
                 .catch(() => {
-                    statusImg.setAttribute('src', message.fail);
+                    statusMessage.style.width = '200px';
+                    statusMessage.textContent = `${message.fail}`;
                 })
                 .finally(() => {
                     clearInput();
                     setTimeout(() => {
                         statusMessage.remove();
-                    }, 5000);
+                    }, 7000);
                 });
 
             });
