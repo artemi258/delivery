@@ -10,10 +10,12 @@
          const sliders = document.querySelectorAll('.slider__slide');
 
          sliders.forEach(item => {
-             item.classList.remove('slider__active', 'wow', 'animate__animated', 'animate__fadeIn');
-             item.querySelector('.slider__img').style.cssText = `
-             width: 72px;
-             height: 72px;
+             if (wrapper.getBoundingClientRect().width == '1140') {
+            item.style.display = 'none';
+            item.classList.remove('slider__active', 'wow', 'animate__animated', 'animate__fadeIn');
+            item.querySelector('.slider__img').style.cssText = `
+          width: 72px;
+          height: 72px;
           `
              item.querySelector('.slider__name').style.cssText = `
           font-size: 13px;
@@ -25,9 +27,12 @@
           margin: 5px 0 0 0;
           line-height: 13px;
           `
+             }
+             
          });
 
          sliders[1].classList.add('slider__active', 'wow', 'animate__animated', 'animate__fadeIn');
+         sliders[1].style.display = 'block';
          sliders[1].querySelector('.slider__img').style.cssText = `
          width: 114px;
          height: 114px;
@@ -62,17 +67,17 @@
          slidesActive();
      });
 
-     let sliderInterval = setInterval(nextSlider, 3000); // убрать обратный  отсчет слайдера после отвода мышки
+    //  let sliderInterval = setInterval(nextSlider, 3000); // убрать обратный  отсчет слайдера после отвода мышки
 
-     function autoSlider() {
-         sliderInterval = setInterval(nextSlider, 3000);
-     };
-     wrapper.addEventListener('mouseenter', () => {
-         clearInterval(sliderInterval);
-     });
-     wrapper.addEventListener('mouseleave', () => {
-         autoSlider();
-     });
+    //  function autoSlider() {
+    //      sliderInterval = setInterval(nextSlider, 3000);
+    //  };
+    //  wrapper.addEventListener('mouseenter', () => {
+    //      clearInterval(sliderInterval);
+    //  });
+    //  wrapper.addEventListener('mouseleave', () => {
+    //      autoSlider();
+    //  });
 
  }
 

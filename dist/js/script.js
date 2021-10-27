@@ -4544,7 +4544,7 @@ var wow = new wowjs__WEBPACK_IMPORTED_MODULE_3__["WOW"]({
 });
 wow.init();
 window.addEventListener('DOMContentLoaded', function () {
-  'use strick';
+  "use strict";
 
   Object(_modules_slider__WEBPACK_IMPORTED_MODULE_0__["default"])();
   Object(_modules_form__WEBPACK_IMPORTED_MODULE_1__["default"])();
@@ -4739,12 +4739,16 @@ var slider = function slider() {
   function slidesActive() {
     var sliders = document.querySelectorAll('.slider__slide');
     sliders.forEach(function (item) {
-      item.classList.remove('slider__active', 'wow', 'animate__animated', 'animate__fadeIn');
-      item.querySelector('.slider__img').style.cssText = "\n             width: 72px;\n             height: 72px;\n          ";
-      item.querySelector('.slider__name').style.cssText = "\n          font-size: 13px;\n          line-height: 16px; \n          margin: 5px 0 0 0;\n          ";
-      item.querySelector('.slider__text').style.cssText = "\n          font-size: 10px;\n          margin: 5px 0 0 0;\n          line-height: 13px;\n          ";
+      if (wrapper.getBoundingClientRect().width == '1140') {
+        item.style.display = 'none';
+        item.classList.remove('slider__active', 'wow', 'animate__animated', 'animate__fadeIn');
+        item.querySelector('.slider__img').style.cssText = "\n          width: 72px;\n          height: 72px;\n          ";
+        item.querySelector('.slider__name').style.cssText = "\n          font-size: 13px;\n          line-height: 16px; \n          margin: 5px 0 0 0;\n          ";
+        item.querySelector('.slider__text').style.cssText = "\n          font-size: 10px;\n          margin: 5px 0 0 0;\n          line-height: 13px;\n          ";
+      }
     });
     sliders[1].classList.add('slider__active', 'wow', 'animate__animated', 'animate__fadeIn');
+    sliders[1].style.display = 'block';
     sliders[1].querySelector('.slider__img').style.cssText = "\n         width: 114px;\n         height: 114px;\n     ";
     sliders[1].querySelector('.slider__name').style.cssText = "\n         font-size: 18px;\n         line-height: 22px;\n         margin: 19px 0 0 0;\n     ";
     sliders[1].querySelector('.slider__text').style.cssText = "\n         font-size: 14px;\n         margin: 15px 0 0 0;\n         line-height: 22px;\n         ";
@@ -4767,20 +4771,16 @@ var slider = function slider() {
     var sliders = document.querySelectorAll('.slider__slide');
     inner.prepend(sliders[sliders.length - 1]);
     slidesActive();
-  });
-  var sliderInterval = setInterval(nextSlider, 3000); // убрать обратный  отсчет слайдера после отвода мышки
-
-  function autoSlider() {
-    sliderInterval = setInterval(nextSlider, 3000);
-  }
-
-  ;
-  wrapper.addEventListener('mouseenter', function () {
-    clearInterval(sliderInterval);
-  });
-  wrapper.addEventListener('mouseleave', function () {
-    autoSlider();
-  });
+  }); //  let sliderInterval = setInterval(nextSlider, 3000); // убрать обратный  отсчет слайдера после отвода мышки
+  //  function autoSlider() {
+  //      sliderInterval = setInterval(nextSlider, 3000);
+  //  };
+  //  wrapper.addEventListener('mouseenter', () => {
+  //      clearInterval(sliderInterval);
+  //  });
+  //  wrapper.addEventListener('mouseleave', () => {
+  //      autoSlider();
+  //  });
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (slider);

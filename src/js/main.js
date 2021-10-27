@@ -21,9 +21,8 @@ const wow = new WOW(
 
 
 window.addEventListener('DOMContentLoaded', () => {
-    'use strick';
+    "use strict";
 
-   
    slider();
    forms();
    scrolling();
