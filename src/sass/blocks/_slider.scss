@@ -5,6 +5,7 @@
         width: 360px;
         opacity: 0.3;
         min-height: 145px;
+        display: block
     }
     &__divinder {
         @include divinder;
@@ -78,6 +79,7 @@
         opacity: 1;
         margin: 0 45px 0 45px;
         width: 600px;
+        display: block;
     }
 }
 

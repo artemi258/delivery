@@ -3,15 +3,24 @@
      const next = document.querySelector('.next'),
          prev = document.querySelector('.prev'),
          wrapper = document.querySelector('.slider__wrapper'),
-         inner = document.querySelector('.slider__inner');
+         inner = document.querySelector('.slider__inner'),
+         mediaQuery = window.matchMedia('(max-width: 1439px)');
+         const sliders = document.querySelectorAll('.slider__slide');
+         sliders.forEach(item => {
+            if (mediaQuery.matches) {
+                item.style.display = 'none';
+            } else {
+                item.style.display = 'block';
 
-
+            }
+        })
+         
      function slidesActive() {
          const sliders = document.querySelectorAll('.slider__slide');
 
          sliders.forEach(item => {
              if (wrapper.getBoundingClientRect().width == '1140') {
-            item.style.display = 'none';
+            // item.style.display = 'none';
             item.classList.remove('slider__active', 'wow', 'animate__animated', 'animate__fadeIn');
             item.querySelector('.slider__img').style.cssText = `
           width: 72px;
@@ -27,6 +36,23 @@
           margin: 5px 0 0 0;
           line-height: 13px;
           `
+             } else {
+                item.style.display = 'block';
+                item.classList.remove('slider__active', 'wow', 'animate__animated', 'animate__fadeIn');
+                item.querySelector('.slider__img').style.cssText = `
+              width: 72px;
+              height: 72px;
+              `
+                 item.querySelector('.slider__name').style.cssText = `
+              font-size: 13px;
+              line-height: 16px; 
+              margin: 5px 0 0 0;
+              `
+                 item.querySelector('.slider__text').style.cssText = `
+              font-size: 10px;
+              margin: 5px 0 0 0;
+              line-height: 13px;
+              `
              }
              
          });

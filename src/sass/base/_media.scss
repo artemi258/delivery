@@ -1,7 +1,9 @@
-@media (max-width: 1439px) {
+@media (min-width: 1440px) {
     .slider__slide {
         display: block;
     }
+}
+@media (max-width: 1439px) {
     .slider__slide {
         display: none;
     }
