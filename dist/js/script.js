@@ -4734,22 +4734,13 @@ var slider = function slider() {
   var next = document.querySelector('.next'),
       prev = document.querySelector('.prev'),
       wrapper = document.querySelector('.slider__wrapper'),
-      inner = document.querySelector('.slider__inner'),
-      mediaQuery = window.matchMedia('(max-width: 1439px)');
-  var sliders = document.querySelectorAll('.slider__slide');
-  sliders.forEach(function (item) {
-    if (mediaQuery.matches) {
-      item.style.display = 'none';
-    } else {
-      item.style.display = 'block';
-    }
-  });
+      inner = document.querySelector('.slider__inner');
 
   function slidesActive() {
     var sliders = document.querySelectorAll('.slider__slide');
     sliders.forEach(function (item) {
       if (wrapper.getBoundingClientRect().width == '1140') {
-        // item.style.display = 'none';
+        item.style.display = 'none';
         item.classList.remove('slider__active', 'wow', 'animate__animated', 'animate__fadeIn');
         item.querySelector('.slider__img').style.cssText = "\n          width: 72px;\n          height: 72px;\n          ";
         item.querySelector('.slider__name').style.cssText = "\n          font-size: 13px;\n          line-height: 16px; \n          margin: 5px 0 0 0;\n          ";
@@ -4786,16 +4777,20 @@ var slider = function slider() {
     var sliders = document.querySelectorAll('.slider__slide');
     inner.prepend(sliders[sliders.length - 1]);
     slidesActive();
-  }); //  let sliderInterval = setInterval(nextSlider, 3000); // убрать обратный  отсчет слайдера после отвода мышки
-  //  function autoSlider() {
-  //      sliderInterval = setInterval(nextSlider, 3000);
-  //  };
-  //  wrapper.addEventListener('mouseenter', () => {
-  //      clearInterval(sliderInterval);
-  //  });
-  //  wrapper.addEventListener('mouseleave', () => {
-  //      autoSlider();
-  //  });
+  });
+  var sliderInterval = setInterval(nextSlider, 3000); // убрать обратный  отсчет слайдера после отвода мышки
+
+  function autoSlider() {
+    sliderInterval = setInterval(nextSlider, 3000);
+  }
+
+  ;
+  wrapper.addEventListener('mouseenter', function () {
+    clearInterval(sliderInterval);
+  });
+  wrapper.addEventListener('mouseleave', function () {
+    autoSlider();
+  });
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (slider);
