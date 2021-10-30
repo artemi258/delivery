@@ -1,12 +1,11 @@
 @media (max-width: 1439px) {
-    .slider__slide {
-        display: none;
-    }
-    .slider__active {
-        margin: 0;
-    }
-    .slider__wrapper {
-        width: 1140px;
+    .slider {
+        &__active {
+            margin: 0;
+        }
+        &__wrapper {
+            width: 1140px;
+        }
     }
     .slider .next {
         right: 455px;
@@ -16,8 +15,103 @@
     }
 }
 @media (max-width: 1200px) {
-    
+    .container {
+        max-width: 960px;
+    }
+    .header {
+        &__title {
+            font-size: 55px;
+        }
+        &__title-sub {
+            font-size: 25px;
+        }
+        &__menu-icon {
+            min-width: 92px;
+            height: 96px;
+        }
+        ul {
+            align-items: center;
+            padding: 0 10px;
+        }
+        ul li {
+            padding: 0 8px;
+        }
+        &__menu-tel {
+            font-size: 15px;
+        }
+    }
+    .button {
+        font-size: 11px;
+        &__consultation {
+            &::before {
+                width: 365px;
+                right: 200px;
+            }
+            &::after {
+                width: 365px;
+                left: 200px;
+            }
+        }
+    }
+    .advantages {
+        &__column {
+            width: 450px;
+        }
+    }
+    .delivery {
+        &__elem {
+            width: 300px;
+        }
+    }
+    .prices {
+        &__cart {
+            width: 220px;
+        }
+    }
+    .map {
+        &__img {
+            left: 345px;
+        }
+    }
+    .footer {
+        hr {
+            margin: 20px 0;
+        }
+    }
+    .consultation {
+        &__img {
+            &::before {
+                width: 420px;
+            }
+            &::after {
+                width: 420px;
+            }
+        }
+        &__input {
+            width: 250px;
+        }
+    }
+    .scheme {
+        padding: 45px 0;
+        &__item {
+            margin-top: 36px;
+        }
+    }
+    .slider {
+        &__wrapper {
+            width: 960px;
+        }
+    }
+    .slider .next {
+        right: 380px;
+    }
+    .slider .prev {
+        left: 380px;
+    }
+}
 
-    
-    
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
 }

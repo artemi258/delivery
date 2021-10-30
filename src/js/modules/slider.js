@@ -9,7 +9,7 @@
          const sliders = document.querySelectorAll('.slider__slide');
 
          sliders.forEach(item => {
-             if (wrapper.getBoundingClientRect().width == '1140') {
+             if (wrapper.getBoundingClientRect().width == '1140' || wrapper.getBoundingClientRect().width == '960') {
             item.style.display = 'none';
             item.classList.remove('slider__active', 'wow', 'animate__animated', 'animate__fadeIn');
             item.querySelector('.slider__img').style.cssText = `
@@ -83,17 +83,17 @@
          slidesActive();
      });
 
-     let sliderInterval = setInterval(nextSlider, 3000); // убрать обратный  отсчет слайдера после отвода мышки
+    //  let sliderInterval = setInterval(nextSlider, 3000); // убрать обратный  отсчет слайдера после отвода мышки
 
-     function autoSlider() {
-         sliderInterval = setInterval(nextSlider, 3000);
-     };
-     wrapper.addEventListener('mouseenter', () => {
-         clearInterval(sliderInterval);
-     });
-     wrapper.addEventListener('mouseleave', () => {
-         autoSlider();
-     });
+    //  function autoSlider() {
+    //      sliderInterval = setInterval(nextSlider, 3000);
+    //  };
+    //  wrapper.addEventListener('mouseenter', () => {
+    //      clearInterval(sliderInterval);
+    //  });
+    //  wrapper.addEventListener('mouseleave', () => {
+    //      autoSlider();
+    //  });
 
  }
 
