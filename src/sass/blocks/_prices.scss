@@ -1,9 +1,11 @@
 .prices {
     min-height: 500px;
     padding-top: 53px;
+
     &__divinder {
         @include divinder;
     }
+
     &__promo {
         color: #595959;
         font-size: 21px;
@@ -13,11 +15,13 @@
         margin: 17px auto 0 auto;
         text-align: center;
     }
+
     &__wrapper {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
     }
+
     &__cart {
         width: 261px;
         min-height: 330px;
@@ -25,6 +29,7 @@
         margin-top: 34px;
         padding-bottom: 26px;
     }
+
     &__title {
         height: 61px;
         width: 100%;
@@ -38,16 +43,19 @@
         align-items: center;
         margin: 0;
     }
+
     &__img {
         width: 60px;
         height: 52px;
         margin: 0 auto;
         margin-top: 14px;
+
         img {
             width: 100%;
             height: 100%;
         }
     }
+
     &__delivery {
         font-size: 14px;
         font-weight: 400;
@@ -56,6 +64,7 @@
         text-align: center;
         margin-top: 12px;
     }
+
     &__price {
         font-size: 28px;
         text-transform: none;
@@ -63,6 +72,7 @@
         text-align: center;
         margin-top: 3px;
     }
+
     &__text {
         font-size: 14px;
         line-height: 20px;

@@ -1,116 +1,60 @@
    function forms() {
-        const form = document.querySelectorAll('form'),
-              input = document.querySelectorAll('input'),
-              upLoad = document.querySelectorAll('[name="upload"]');
+       const form = document.querySelectorAll('form'),
+           input = document.querySelectorAll('input');
 
-              const  postData = async (url, data) => {
-                let res = await fetch(url, {
-                    method: "POST",
-                    // headers: {
-                    //     'Content-Type': 'application/json'
-                    // },
-                    body: data
-                });
-                return await res.text();
-            };
+       const postData = async (url, data) => {
+           let res = await fetch(url, {
+               method: "POST",
+               body: data
+           });
 
+           return await res.text();
+       };
 
-        const message = {
-            loading: 'Загрузка...',
-            success: 'Отправлено!',
-            error: 'Ошибка',
-            spinner: 'assets/img/spinner.gif',
-            ok: 'assets/img/ok.png',
-            fail: 'assets/img/fail.png'
-        };
-
-        const path = {
-            designer: 'assets/server.php',
-            question: 'assets/question.php'
-        };
+       const message = {
+           spinner: "./icons/loading.gif",
+           ok: "./icons/ok.png",
+           fail: "Что-то пошло не так(😞"
+       };
 
        const clearInput = () => {
            input.forEach(item => {
                item.value = '';
            });
-           upLoad.forEach(item => {
-               item.previousElementSibling.textContent = 'Файл не выбран';
+       }
+       form.forEach(item => {
+
+           item.addEventListener('submit', (e) => {
+               e.preventDefault();
+
+               let statusMessage = document.createElement('div');
+               statusMessage.classList.add('status');
+               item.appendChild(statusMessage);
+
+               let statusImg = document.createElement('img');
+               statusImg.setAttribute('src', message.spinner);
+               statusMessage.appendChild(statusImg);
+
+               const formData = new FormData(item);
+
+               postData('../send.php', formData)
+                   .then(res => {
+                       console.log(res);
+                       statusImg.setAttribute('src', message.ok);
+                   })
+                   .catch(() => {
+                       statusMessage.style.width = '200px';
+                       statusMessage.textContent = `${message.fail}`;
+                   })
+                   .finally(() => {
+                       clearInput();
+                       setTimeout(() => {
+                           statusMessage.remove();
+                       }, 7000);
+                   });
+
            });
-       };
-
-       upLoad.forEach(item => {
-            item.addEventListener('input', () => {
-                console.log(item.files[0]);
-                let dots;
-                const arr = item.files[0].name.split('.');
-                arr[0].length > 10 ? dots = '...' : dots = '.';
-                const name = arr[0].substring(0, 11) + dots + arr[1];
-                item.previousElementSibling.textContent = name ;
-            });
        });
-
-        form.forEach(item => {
-            item.addEventListener('submit', (e) => {
-                e.preventDefault();
-
-                let statusMessage = document.createElement('div');
-                    statusMessage.classList.add('status');
-                    item.parentNode.appendChild(statusMessage);
-
-                item.classList.remove('formStyleBottom');
-                item.classList.add('formStyleUp');
-
-                setTimeout(() => {
-                   item.style.display = 'none';
-                }, 500);   
-
-                let statusImg = document.createElement('img');   
-                    statusImg.classList.add('imgFadeInUp');                                                                        
-                    statusImg.setAttribute('src', message.spinner);
-                    statusMessage.appendChild(statusImg);
-    
-                let textMessage = document.createElement('div');
-                    textMessage.textContent = message.loading;
-                    statusMessage.appendChild(textMessage);
-
-                const formData = new FormData(item);
-
-                
-
-                let api;
-
-                item.closest('.popup-design') || item.classList.contains('calc_form') ? api = path.designer : api = path.question;
-                console.log(api);
-
-             if (api == path.designer) {
-               for (let key in product) {
-                   formData.append(key, product[key]);
-               }
-             }
-
-            //  const json = JSON.stringify(Object.fromEntries(formData.entries()));
-
-                postData(api, formData)
-                .then(res => {
-                    console.log(res);
-                    statusImg.setAttribute('src', message.ok);
-                    textMessage.textContent = message.success;
-                })
-                .catch(() => {
-                    statusMessage.textContent = message.error;
-                })
-                .finally(() => {
-                    clearInput();
-                    setTimeout(() => {
-                        statusMessage.remove();
-                        item.style.display = 'block';
-                        item.classList.remove('formStyleUp');
-                        item.classList.add('formStyleBottom');
-                    }, 5000);
-                });
-
-            });
-        });
-   }    
+   }
 
    export default forms;

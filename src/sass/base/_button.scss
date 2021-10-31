@@ -11,9 +11,11 @@
     border: none;
     display: block;
     outline: none;
+
     &:focus {
         box-shadow: 4px 4px 20px $color;
     }
+
     &__header {
         padding: 23px 45px;
         font-size: 15px;
@@ -25,16 +27,19 @@
         justify-content: center;
         align-items: center;
     }
+
     &__prices {
         margin: 25px auto 0 auto;
         padding: 18px 45px;
         display: block;
     }
+
     &__consultation {
         margin: 0 auto;
         margin-top: 29px;
         padding: 18px 31px;
         position: relative;
+
         &::before {
             content: '';
             height: 1px;
@@ -44,6 +49,7 @@
             top: 24px;
             right: 194px;
         }
+
         &::after {
             content: '';
             height: 1px;
@@ -54,6 +60,7 @@
             left: 194px;
         }
     }
+
     &__questions {
         margin-top: 16px;
         padding: 18px 31px;

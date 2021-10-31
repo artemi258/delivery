@@ -1,6 +1,11 @@
 .map {
     background: url('../img/mapBG.jpg') center center / cover no-repeat;
     min-height: 500px;
+
+    &__wrapper {
+        position: relative;
+    }
+
     &__img {
         width: 235px;
         height: 104px;
@@ -10,17 +15,20 @@
         left: 434px;
         padding: 27px 50px;
     }
+
     &__address {
         font-size: 14px;
         font-weight: 300;
         color: #898989;
         font-style: normal;
         line-height: 20px;
+
         span {
             font-size: 16px;
             font-weight: 700;
             color: $color;
         }
+
         a {
             color: $color;
         }

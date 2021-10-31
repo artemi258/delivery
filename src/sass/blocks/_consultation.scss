@@ -1,6 +1,7 @@
 .consultation {
     padding: 55px 0 58px 0;
     min-width: 287px;
+
     &__title {
         font-size: 28px;
         font-weight: 400;
@@ -8,11 +9,13 @@
         text-align: center;
         margin: 0;
     }
+
     &__img {
         width: 102px;
         height: 102px;
         margin: 20px auto 0 auto;
         position: relative;
+
         &::before {
             content: '';
             height: 1px;
@@ -22,6 +25,7 @@
             top: 51px;
             right: 112px;
         }
+
         &::after {
             content: '';
             height: 1px;
@@ -31,16 +35,19 @@
             top: 51px;
             left: 112px;
         }
+
         img {
             width: 100%;
             height: 100%;
         }
     }
+
     &__wrapper {
         margin-top: 16px;
         position: relative;
         display: flex;
         justify-content: center;
+
         &::before {
             content: '';
             position: absolute;
@@ -50,6 +57,7 @@
             left: 0;
             top: -66px;
         }
+
         &::after {
             content: '';
             position: absolute;
@@ -60,6 +68,7 @@
             top: -66px;
         }
     }
+
     &__input {
         border: 1px solid #cacaca;
         border-radius: 50px;
@@ -68,9 +77,11 @@
         width: 260px;
         outline: none;
         font-weight: 300;
+
         &:focus {
             border-color: $color;
         }
+
         &:not(:last-child) {
             margin-right: 5px;
         }

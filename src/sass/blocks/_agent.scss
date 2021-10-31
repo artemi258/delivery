@@ -2,15 +2,18 @@
     background: url('../img/agentBG.png') center center / cover no-repeat;
     min-height: 210px;
     padding: 58px 0 75px 0;
+
     &__img {
         margin: 0 auto;
         width: 102px;
         height: 102px;
+
         img {
             width: 100%;
             height: 100%;
         }
     }
+
     &__title {
         margin: 20px 0 0 0;
         font-size: 26px;
@@ -18,6 +21,7 @@
         color: #ffffff;
         text-align: center;
     }
+
     &__text {
         margin: 22px auto 0 auto;
         text-align: center;

@@ -1,38 +1,46 @@
 .footer {
     min-height: 141px;
-    padding: 24px 0 36px 0 ;
+    padding: 24px 0 36px 0;
     background-color: #25333c;
+
     &__wrapper {
         display: flex;
         justify-content: space-between;
+
         &-sub {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
     }
+
     &__logo {
         display: flex;
         align-items: center;
     }
+
     &__icon {
         width: 68px;
         height: 71px;
+
         img {
             width: 100%;
             height: 100%;
         }
     }
+
     &__text {
         font-size: 16px;
         font-weight: 500;
         color: #ffffff;
         margin-left: 43px;
     }
+
     &__connection {
         display: flex;
         align-items: center;
     }
+
     &__tel {
         font-size: 19px;
         font-weight: 500;
@@ -41,6 +49,7 @@
         flex-direction: column;
         text-align: end;
         margin-right: 19px;
+
         span {
             font-size: 14px;
             font-weight: 300;
@@ -48,35 +57,40 @@
             margin-bottom: 3px;
         }
     }
+
     &__website {
         font-size: 13px;
         font-weight: 300;
         color: #9fa1a5;
     }
-    
+
     &__politics {
         font-size: 13px;
         font-weight: 300;
         text-decoration: underline;
         color: $color;
     }
+
     &__logo {
         font-size: 13px;
         font-weight: 300;
         color: #9fa1a5;
+
         span {
             width: 30px;
             height: 32px;
             margin-left: 10px;
             opacity: 0.7;
+
             img {
                 width: 100%;
                 height: 100%;
             }
         }
     }
-    
+
 }
+
 hr {
     height: 1px;
     opacity: 0.3;
