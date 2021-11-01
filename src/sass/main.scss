@@ -19,7 +19,6 @@
 @import './blocks/map';
 @import './blocks/footer';
 @import './base/formLoading';
-@import './base/media';
 
 
 .container {
@@ -31,3 +30,5 @@
 * {
     font-family: 'Roboto', sans-serif;
 }
+
+@import './base/media';

@@ -16,7 +16,7 @@
 }
 @media (max-width: 1200px) {
     .container {
-        max-width: 960px;
+        width: 960px;
     }
     .header {
         &__title {
@@ -26,7 +26,7 @@
             font-size: 25px;
         }
         &__menu-icon {
-            min-width: 92px;
+            width: 92px;
             height: 96px;
         }
         &__link {
@@ -112,7 +112,7 @@
 
 @media (max-width: 992px) {
     .container {
-        max-width: 720px;
+        width: 720px;
     }
     .header {
         &__link {
@@ -149,26 +149,142 @@
             position: relative;
             transition: 0.5s all linear;
             span {
+                margin: 0px;
+                transition: 0.5s all linear;
+                background-color: $color;
             }
             :nth-child(1) {
                 transform: rotate(-45deg);
-                margin: 0px;
                 position: absolute;
-                transition: 0.5s all linear;
-                background-color: $color;
             }
             :nth-child(3) {
                 transform: rotate(45deg);
                 position: absolute;
-                transition: 0.5s all linear;
-                background-color: $color;
             }
             :nth-child(2) {
                 transform: translateX(100%);
                 opacity: 0;
-                transition: 0.5s all linear;
-                background-color: $color;
+            }
+        }
+        &__menu {
+            &-icon {
+                width: 85px;
+                height: 85px;
+            }
+        }
+        &__promo {
+            margin-bottom: 15px;
+        }
+        &__title {
+            font-size: 50px;
+            margin-top: 30px;
+        }
+        &__services {
+            &-text {
+                line-height: 21px;
+                font-size: 15px;
             }
         }
     }
+    .advantages {
+        &__wrapper {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    .delivery {
+        &__wrapper {
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 17px;
+        }
+        &__elem {
+            margin-top: 20px;
+        }
+    }
+    .agent {
+        &__text {
+            width: 720px;
+        }
+    }
+    .prices {
+        &__wrapper {
+            justify-content: space-around;
+        }
+    }
+    .consultation {
+        &__img {
+            &::before {
+                width: 300px;
+            }
+            &:after {
+                width: 300px;
+            }
+        }
+        &__wrapper {
+            &::before {
+                height: 170px;
+            }
+            &::after {
+                height: 170px;
+            }
+        }
+        &__input {
+            width: 150px;
+            padding: 15px 25px;
+            font-size: 15px;
+        }
+    }
+    .managers {
+        &__text {
+            width: 720px;
+        }
+    }
+    .questions {
+        padding: 55px 0 70px 0;
+        &__wrapper {
+            width: 720px;
+            height: 279px;
+        }
+        &__form {
+            padding: 15px 35px;
+        }
+        &__input {
+            padding: 15px 25px;
+            width: 161px;
+        }
+    }
+    .map {
+        &__img {
+            left: 225px;
+        }
+    }
+    .footer {
+        &__icon {
+            min-width: 65px;
+            height: 65px;
+        }
+        &__connection {
+            flex-direction: column;        }
+        &__tel {
+            margin-bottom: 5px;
+        }
+    }
+    .button {
+        padding: 15px 20px;
+        &__consultation {
+            &::before {
+                width: 265px;
+                right: 170px;
+            }
+            &::after {
+                width: 265px;
+                left: 170px;
+            }
+        }
+    }
+    .status {
+        margin-top: 15px;
+    }
+
 }
