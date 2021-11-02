@@ -73,7 +73,7 @@
                 }
             }
 
-            &:not(:last-child)::before {
+            &:not(:nth-last-child(2))::before {
                 content: "";
                 position: absolute;
                 width: 1px;
@@ -89,7 +89,7 @@
                 padding-left: 0;
             }
 
-            &:last-child {
+            &:nth-last-child(2) {
                 padding-right: 0;
             }
         }

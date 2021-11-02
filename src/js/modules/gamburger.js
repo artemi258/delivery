@@ -4,24 +4,24 @@ function gamburger() {
         close = document.querySelector('.header__close'),
         gamburger = document.querySelector('.header__gamburger');
 
-    gamburger.addEventListener('click', (e) => {
+    gamburger.addEventListener('click', () => {
         gamburger.classList.toggle('header__active');
         if (gamburger.classList.contains('header__active')) {
-            menu.style.transform = 'translateX(0)';
+            menu.classList.add('header__link-active');
         } else {
-            menu.style.transform = 'translateX(-100%)';
+            menu.classList.remove('header__link-active');
         }
     })
 
     close.addEventListener('click', () => {
-        menu.style.transform = 'translateX(-100%)';
+        menu.classList.remove('header__link-active');
         gamburger.classList.remove('header__active');
     })
 
     menu.addEventListener('click', (e) => {
         menuLink.forEach(link => {
             if (e.target == link) {
-                menu.style.transform = 'translateX(-100%)';
+                menu.classList.remove('header__link-active');
                 gamburger.classList.remove('header__active');
             }
         })
