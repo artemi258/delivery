@@ -4520,14 +4520,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_form__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/form */ "./src/js/modules/form.js");
 /* harmony import */ var _modules_scrolling__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/scrolling */ "./src/js/modules/scrolling.js");
 /* harmony import */ var _modules_gamburger__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/gamburger */ "./src/js/modules/gamburger.js");
-/* harmony import */ var wowjs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! wowjs */ "./node_modules/wowjs/dist/wow.js");
-/* harmony import */ var wowjs__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(wowjs__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _modules_up__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/up */ "./src/js/modules/up.js");
+/* harmony import */ var wowjs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! wowjs */ "./node_modules/wowjs/dist/wow.js");
+/* harmony import */ var wowjs__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(wowjs__WEBPACK_IMPORTED_MODULE_5__);
 
 
 
 
 
-var wow = new wowjs__WEBPACK_IMPORTED_MODULE_4__["WOW"]({
+
+var wow = new wowjs__WEBPACK_IMPORTED_MODULE_5__["WOW"]({
   boxClass: 'wow',
   // animated element css class (default is wow)
   animateClass: 'animated',
@@ -4552,6 +4554,7 @@ window.addEventListener('DOMContentLoaded', function () {
   Object(_modules_form__WEBPACK_IMPORTED_MODULE_1__["default"])();
   Object(_modules_scrolling__WEBPACK_IMPORTED_MODULE_2__["default"])();
   Object(_modules_gamburger__WEBPACK_IMPORTED_MODULE_3__["default"])();
+  Object(_modules_up__WEBPACK_IMPORTED_MODULE_4__["default"])();
 });
 
 /***/ }),
@@ -4787,7 +4790,7 @@ var slider = function slider() {
   function slidesActive() {
     var sliders = document.querySelectorAll('.slider__slide');
     sliders.forEach(function (item) {
-      if (wrapper.getBoundingClientRect().width == '1140' || wrapper.getBoundingClientRect().width == '960' || wrapper.getBoundingClientRect().width == '720') {
+      if (wrapper.getBoundingClientRect().width <= '1140') {
         item.style.display = 'none';
         item.classList.remove('slider__active', 'wow', 'animate__animated', 'animate__fadeIn');
         item.querySelector('.slider__img').style.cssText = "\n          width: 72px;\n          height: 72px;\n          ";
@@ -4838,6 +4841,30 @@ var slider = function slider() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (slider);
+
+/***/ }),
+
+/***/ "./src/js/modules/up.js":
+/*!******************************!*\
+  !*** ./src/js/modules/up.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function up() {
+  var up = document.querySelector('.up');
+  window.addEventListener('scroll', function () {
+    if (document.documentElement.scrollTop > 1500) {
+      up.style.opacity = '1';
+    } else {
+      up.style.opacity = '0';
+    }
+  });
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (up);
 
 /***/ })
 

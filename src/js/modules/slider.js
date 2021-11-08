@@ -9,7 +9,7 @@
          const sliders = document.querySelectorAll('.slider__slide');
 
          sliders.forEach(item => {
-             if (wrapper.getBoundingClientRect().width == '1140' || wrapper.getBoundingClientRect().width == '960' || wrapper.getBoundingClientRect().width == '720') {
+             if (wrapper.getBoundingClientRect().width <= '1140') {
             item.style.display = 'none';
             item.classList.remove('slider__active', 'wow', 'animate__animated', 'animate__fadeIn');
             item.querySelector('.slider__img').style.cssText = `

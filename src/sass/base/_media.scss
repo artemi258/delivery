@@ -64,9 +64,19 @@
             width: 300px;
         }
     }
+    .agent {
+        &__text {
+            width: 100%;
+        }
+    }
     .prices {
         &__cart {
             width: 220px;
+        }
+    }
+    .managers {
+        &__text {
+            width: 100%;
         }
     }
     .map {
@@ -124,7 +134,7 @@
             height: 100vh;
             width: 300px;
             margin: 0;
-            padding: 10% 0;
+            padding: 150px 0;
             background-color: #ffffff;
             opacity: 0;
             z-index: 10;
@@ -190,6 +200,14 @@
                 font-size: 15px;
             }
         }
+        &__divinder {
+            &::before {
+                width: 343px;
+            }
+            &::after {
+                width: 343px;
+            }
+        }
     }
     .advantages {
         &__wrapper {
@@ -207,12 +225,7 @@
             margin-top: 20px;
         }
         &__info {
-            width: 720px;
-        }
-    }
-    .agent {
-        &__text {
-            width: 720px;
+            width: 100%;
         }
     }
     .prices {
@@ -243,11 +256,6 @@
             font-size: 15px;
         }
     }
-    .managers {
-        &__text {
-            width: 720px;
-        }
-    }
     .slider {
         &__wrapper {
             width: 720px;
@@ -262,8 +270,7 @@
     .questions {
         padding: 55px 0 70px 0;
         &__wrapper {
-            width: 720px;
-            height: 279px;
+            width: 100%;
         }
         &__form {
             padding: 15px 35px;
@@ -284,7 +291,8 @@
             height: 65px;
         }
         &__connection {
-            flex-direction: column;        }
+            flex-direction: column;
+        }
         &__tel {
             margin-bottom: 5px;
         }
@@ -305,5 +313,351 @@
     .status {
         margin-top: 15px;
     }
+    .up {
+        height: 30px;
+        width: 30px;
+    }
 
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 540px;
+    }
+    .header {
+        &__promo {
+            font-size: 23px;
+        }
+        &__title {
+            font-size: 38px;
+            &-sub {
+                font-size: 23px;
+            }
+        }
+        &__divinder {
+            &::before {
+                width: 252px;
+            }
+            &::after {
+                width: 252px;
+            }
+        }
+        &__services {
+            flex-wrap: wrap;
+        }
+    }
+    .prices {
+        &__promo {
+            width: 100%;
+        }
+    }
+    .consultation {
+        &__wrapper {
+            flex-wrap: wrap;
+            margin: 0;
+            &::before {
+                height: 235px;
+                top: -50px;
+            }
+            &::after {
+                height: 235px;
+                top: -50px;
+            }
+        }
+        &__input {
+            margin-top: 16px;
+        }
+        &__img {
+            &::before {
+                width: 209px;
+            }
+            &::after {
+                width: 209px;
+            }
+        }
+    }
+    .slider {
+        &__wrapper {
+            width: 540px;
+        }
+        &__text {
+            line-height: 20px;
+        }
+    }
+    .slider .next {
+        right: 160px;
+    }
+    .slider .prev {
+        left: 160px;
+    }
+    .questions {
+        &__input {
+            &:nth-child(3) {
+                margin-top: 6px;
+            }
+        }
+    }
+    .map {
+        min-height: 400px;
+        &__img {
+            top: 135px;
+            left: 160px;
+            padding: 15px 40px;
+        }
+    }
+    .footer {
+        &__wrapper {
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        &__connection {
+            flex-direction: row;
+        }
+        &__text {
+            margin-left: 15px;
+        }
+        &__tel {
+            margin: 0 6px 0 0;
+        }
+        hr {
+            margin: 15px 0;
+        }
+    }
+    .button {
+        font-size: 9px;
+        &__consultation {
+            &::before {
+                width: 171px;
+            }
+            &::after {
+                width: 171px;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        width: 300px;
+        padding: 0 10px;
+    }
+    .header {
+        padding: 20px 0 60px 0;
+        &__menu {
+            flex-wrap: wrap;
+            &-icon {
+                width: 80px;
+                height: 80px;
+                padding-bottom: 10px;
+            }
+        }
+        &__link {
+            width: 50%;
+            li {
+                a {
+                    font-size: 20px;
+                }
+            }
+        }
+        &__promo {
+            font-size: 20px;
+        }
+        &__title {
+            font-size: 30px;
+            &-sub {
+                font-size: 20px;
+            }
+        }
+        &__divinder {
+            &::before {
+                width: 140px;
+            }
+            &::after {
+                width: 140px;
+            }
+        }
+        &__services {
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 30px;
+            &-item {
+                margin-top: 5px;
+            }
+            &-icon {
+                width: 60px;
+                height: 44px;
+            }
+            &-text {
+                line-height: 19px;
+            }
+        }
+    }
+    .agent {
+        &__img {
+            width: 100px;
+            height: 100px;
+        }
+        &__text {
+            margin-top: 15px;
+            font-size: 18px;
+            line-height: 24px;
+        }
+        &__title {
+            margin-top: 15px;
+        }
+    }
+    .consultation {
+        padding: 50px 0;
+        &__wrapper {
+            &::before {
+                height: 293px;
+                top: -44px;
+            }
+            &::after {
+                height: 293px;
+                top: -44px;
+            }
+        }
+        &__img {
+            width: 95px;
+            height: 95px;
+            &::before {
+                width: 89px;
+                right: 109px;
+            }
+            &::after {
+                width: 89px;
+                left: 109px;
+            }
+        }
+    }
+    .delivery {
+        padding: 50px 0;
+        &__info {
+            font-size: 20px;
+        }
+        &__img {
+            height: 200px;
+        }
+        &__title {
+            margin-top: 20px;
+        }
+        &__text {
+            margin-top: 15px;
+        }
+    }
+    .footer {
+        padding: 20px 0;
+        &__wrapper-sub {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &__politics {
+            margin-top: 5px;
+        }
+        &__logo {
+            margin-top: 5px;
+        }
+    }
+    .managers {
+        padding: 50px 0;
+        &__img {
+            width: 100px;
+            height: 100px;
+        }
+        &__text {
+            margin-top: 15px;
+            font-size: 18px;
+            line-height: 24px;
+        }
+        &__title {
+            margin-top: 15px;
+        }
+    }
+    .map {
+        background-position-x: 40%;
+        &__wrapper {
+            width: 100%;
+        }
+        &__img {
+            width: 235px;
+            background: #ffffff;
+            top: 20px;
+            left: 0;
+            padding: 15px 15px;
+        }
+    }
+    .prices {
+        padding-top: 30px;
+        &__promo {
+            font-size: 20px;
+        }
+        &__title {
+            height: 57px;
+        }
+        &__text {
+            margin-top: 12px;
+        }
+    }
+    .questions {
+        padding: 50px 0;
+        &__form {
+            padding: 15px 25px;
+        }
+        &__input {
+            width: 100%;
+            &:first-child {
+                margin-right: 0;
+            }
+            &:not(:first-child) {
+                margin: 6px 0 0 0;
+            }
+        }
+    }
+    .scheme {
+        &__item {
+            margin-top: 20px;
+        }
+        &__title {
+            margin-top: 7px;
+        }
+        &__text {
+            margin-top: 7px;
+        }
+    }
+    .slider {
+        padding: 50px 0;
+        &__promo {
+            font-size: 20px;
+            line-height: 23px;
+        }
+        &__wrapper {
+            width: 300px;
+            margin-top: 25px;
+        }
+        &__active {
+            width: 300px;
+        }
+    }
+    .slider .next {
+        right: 50px;
+    }
+    .slider .prev {
+        left: 50px;
+    }
+    .title {
+        font-size: 22px;
+    }
+    .button {
+        &__consultation {
+            &::before {
+                width: 74px;
+                right: 140px;
+            }
+            &::after {
+                width: 74px;
+                left: 140px;
+            }
+        }
+    }
 }

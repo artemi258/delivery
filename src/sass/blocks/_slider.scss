@@ -61,7 +61,7 @@
 
     &__wrapper {
         position: relative;
-        height: 255px;
+        min-height: 255px;
         margin: 31px auto 0 auto;
         width: 1415px;
         overflow: hidden;
@@ -89,7 +89,7 @@
 
     &__active {
         opacity: 1;
-        margin: 0 45px 0 45px;
+        margin: 0 45px;
         width: 600px;
         display: block;
     }

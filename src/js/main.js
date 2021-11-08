@@ -2,6 +2,7 @@ import slider from './modules/slider';
 import forms from './modules/form';
 import scrolling from './modules/scrolling';
 import gamburger from './modules/gamburger';
+import up from './modules/up';
 import {WOW} from 'wowjs';
 
 const wow = new WOW({
@@ -26,5 +27,6 @@ window.addEventListener('DOMContentLoaded', () => {
   forms();
   scrolling();
   gamburger();
+  up();
 
 });
