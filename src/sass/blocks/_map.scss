@@ -1,5 +1,5 @@
 .map {
-    background: url('../img/mapBG.jpg') center center / cover no-repeat;
+    background: url('../img/map/mapBG.jpg') center center / cover no-repeat;
     min-height: 500px;
 
     &__wrapper {
@@ -10,7 +10,7 @@
         width: 235px;
         height: 104px;
         position: absolute;
-        background: url('../img/mapIMG.png') center center / cover no-repeat;
+        background: url('../img/map/mapIMG.png') center center / cover no-repeat;
         top: 171px;
         left: 434px;
         padding: 27px 50px;
