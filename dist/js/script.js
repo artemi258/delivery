@@ -4790,25 +4790,54 @@ var slider = function slider() {
   function slidesActive() {
     var sliders = document.querySelectorAll('.slider__slide');
     sliders.forEach(function (item) {
-      if (wrapper.getBoundingClientRect().width <= '1140') {
-        item.style.display = 'none';
-        item.classList.remove('slider__active', 'wow', 'animate__animated', 'animate__fadeIn');
-        item.querySelector('.slider__img').style.cssText = "\n          width: 72px;\n          height: 72px;\n          ";
-        item.querySelector('.slider__name').style.cssText = "\n          font-size: 13px;\n          line-height: 16px; \n          margin: 5px 0 0 0;\n          ";
-        item.querySelector('.slider__text').style.cssText = "\n          font-size: 10px;\n          margin: 5px 0 0 0;\n          line-height: 13px;\n          ";
-      } else {
-        item.style.display = 'block';
-        item.classList.remove('slider__active', 'wow', 'animate__animated', 'animate__fadeIn');
-        item.querySelector('.slider__img').style.cssText = "\n              width: 72px;\n              height: 72px;\n              ";
-        item.querySelector('.slider__name').style.cssText = "\n              font-size: 13px;\n              line-height: 16px; \n              margin: 5px 0 0 0;\n              ";
-        item.querySelector('.slider__text').style.cssText = "\n              font-size: 10px;\n              margin: 5px 0 0 0;\n              line-height: 13px;\n              ";
-      }
+      //  if (wrapper.getBoundingClientRect().width <= '1140') {
+      // item.style.display = 'none';
+      //     item.querySelector('.slider__img').style.cssText = `
+      //   width: 72px;
+      //   height: 72px;
+      //   `
+      //      item.querySelector('.slider__name').style.cssText = `
+      //   font-size: 13px;
+      //   line-height: 16px; 
+      //   margin: 5px 0 0 0;
+      //   `
+      //      item.querySelector('.slider__text').style.cssText = `
+      //   font-size: 10px;
+      //   margin: 5px 0 0 0;
+      //   line-height: 13px;
+      //   `
+      //  } else {
+      // item.style.display = 'block';
+      item.classList.remove('slider__active', 'wow', 'animate__animated', 'animate__fadeIn'); //     item.querySelector('.slider__img').style.cssText = `
+      //   width: 72px;
+      //   height: 72px;
+      //   `
+      //      item.querySelector('.slider__name').style.cssText = `
+      //   font-size: 13px;
+      //   line-height: 16px; 
+      //   margin: 5px 0 0 0;
+      //   `
+      //      item.querySelector('.slider__text').style.cssText = `
+      //   font-size: 10px;
+      //   margin: 5px 0 0 0;
+      //   line-height: 13px;
+      //   `
+      //      }
     });
-    sliders[1].classList.add('slider__active', 'wow', 'animate__animated', 'animate__fadeIn');
-    sliders[1].style.display = 'block';
-    sliders[1].querySelector('.slider__img').style.cssText = "\n         width: 114px;\n         height: 114px;\n     ";
-    sliders[1].querySelector('.slider__name').style.cssText = "\n         font-size: 18px;\n         line-height: 22px;\n         margin: 19px 0 0 0;\n     ";
-    sliders[1].querySelector('.slider__text').style.cssText = "\n         font-size: 14px;\n         margin: 15px 0 0 0;\n         line-height: 22px;\n         ";
+    sliders[1].classList.add('slider__active', 'wow', 'animate__animated', 'animate__fadeIn'); //      sliders[1].querySelector('.slider__img').style.cssText = `
+    //      width: 114px;
+    //      height: 114px;
+    //  `
+    //      sliders[1].querySelector('.slider__name').style.cssText = `
+    //      font-size: 18px;
+    //      line-height: 22px;
+    //      margin: 19px 0 0 0;
+    //  `
+    //      sliders[1].querySelector('.slider__text').style.cssText = `
+    //      font-size: 14px;
+    //      margin: 15px 0 0 0;
+    //      line-height: 22px;
+    //      `
   }
 
   ;

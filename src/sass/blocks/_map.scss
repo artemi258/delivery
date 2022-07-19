@@ -10,7 +10,7 @@
         width: 235px;
         height: 104px;
         position: absolute;
-        background: url('../img/map/mapIMG.png') center center / cover no-repeat;
+        background: url(../img/map/mapIMG.png) center center/cover no-repeat;
         top: 171px;
         left: 434px;
         padding: 27px 50px;
@@ -22,7 +22,6 @@
         color: #898989;
         font-style: normal;
         line-height: 20px;
-
         span {
             font-size: 16px;
             font-weight: 700;
